@@ -15,6 +15,8 @@
                         <StackLayout Padding="6" VerticalOptions="CenterAndExpand">
                             <Button
                                 BackgroundColor="Blue"
+                                Command="{Binding TapCommand}"
+                                CommandParameter="{Binding .}"
                                 CornerRadius="4"
                                 Text="{Binding value1}"
                                 TextColor="White" />

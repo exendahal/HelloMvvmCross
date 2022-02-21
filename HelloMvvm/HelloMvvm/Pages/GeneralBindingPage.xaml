@@ -30,7 +30,6 @@
                 HorizontalOptions="CenterAndExpand"
                 HorizontalTextAlignment="Center"
                 Text="{Binding Value3}"
-                TextColor="Black"
                 VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>

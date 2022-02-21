@@ -1,4 +1,5 @@
 ﻿using HelloMvvm.Model;
+using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using System;
@@ -6,11 +7,16 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace HelloMvvm.ViewModels
 {
     public class CollectionViewSampleViewModel :  MvxViewModel<string, string>
     {
+
+        public ICommand TapCommand { get; set; }
+
         private readonly IMvxNavigationService _navigationService;
         private ObservableCollection<GeneralModel> _obList;
         public ObservableCollection<GeneralModel> obList
@@ -22,35 +28,34 @@ namespace HelloMvvm.ViewModels
         public CollectionViewSampleViewModel(IMvxNavigationService navigation)
         {
             _navigationService = navigation;
-           
-        }
+            //TestAsyncCommandSimpleBinding = new MvxAsyncCommand(async () => {
 
+
+            //    await Application.Current.MainPage.DisplayAlert("Clicked", "Clecked on Item", "ok");
+            //});
+
+            TapCommand = new Command<GeneralModel>(async items =>
+            {
+                await Application.Current.MainPage.DisplayAlert("Clicked", "Clecked on Item "+items.value1, "ok");
+            });
+
+            }
+        public IMvxAsyncCommand TestAsyncCommandSimpleBinding { get; set; }
         public override Task Initialize()
         {
             //TODO: Add starting logic here
 
-
             obList = new ObservableCollection<GeneralModel>();
-            obList.Add(new GeneralModel
+            for (int i=0;i<10;i++)
             {
-                value1 = "Simple Binding"
-            });
-            obList.Add(new GeneralModel
-            {
-                value1 = "Collection View"
-            });
-            obList.Add(new GeneralModel
-            {
-                value1 = "LOADING"
-            });
-            obList.Add(new GeneralModel
-            {
-                value1 = "CLICK EVENT"
-            });
-            obList.Add(new GeneralModel
-            {
-                value1 = "NAVIGATION"
-            });
+                obList.Add(new GeneralModel
+                {
+                    value1 = "Item " + i,
+                    TapCommand = TapCommand
+
+                }) ;
+            }
+                       
             return base.Initialize();
         }
 
