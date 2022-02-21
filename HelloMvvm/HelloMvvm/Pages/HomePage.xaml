@@ -20,16 +20,19 @@
                     CornerRadius="4"
                     Text="Simple Binding"
                     TextColor="White" />
+
                 <Button
                     BackgroundColor="Blue"
+                    Command="{Binding TestAsyncCommandClickEventPage}"
                     CornerRadius="4"
-                    Text="User Input"
+                    Text="CLICK EVENT"
                     TextColor="White" />
+
                 <Button
                     BackgroundColor="Blue"
-                    Command="{Binding TestAsyncCommandCollection}"
+                    Command="{Binding TestAsyncCommandNavigationSample}"
                     CornerRadius="4"
-                    Text="Collection View"
+                    Text="NAVIGATION"
                     TextColor="White" />
 
                 <Button
@@ -41,16 +44,20 @@
 
                 <Button
                     BackgroundColor="Blue"
-                    Command="{Binding TestAsyncCommandClickEventPage}"
+                    Command="{Binding TestAsyncCommandCollection}"
                     CornerRadius="4"
-                    Text="CLICK EVENT"
+                    Text="Collection View"
                     TextColor="White" />
+
+
 
                 <Button
                     BackgroundColor="Blue"
                     CornerRadius="4"
-                    Text="NAVIGATION"
+                    Text="User Input"
                     TextColor="White" />
+
+
 
             </StackLayout>
         </ScrollView>

@@ -20,6 +20,7 @@ namespace HelloMvvm.ViewModels
         public IMvxAsyncCommand TestAsyncCommandCollection { get; set; }
         public IMvxAsyncCommand TestAsyncCommandIsBusy { get; set; }
         public IMvxAsyncCommand TestAsyncCommandClickEventPage { get; set; }
+        public IMvxAsyncCommand TestAsyncCommandNavigationSample { get; set; }
 
        
 
@@ -31,9 +32,8 @@ namespace HelloMvvm.ViewModels
                 var result = await _navigationService.Navigate<GeneralBindingPageViewModel>();
             });
             TestAsyncCommandCollection = new MvxAsyncCommand(async () => {
-
-                string nextData = "Hello From Homepage";
-                var result = await _navigationService.Navigate<CollectionViewSampleViewModel, string, string>(nextData);
+               
+                var result = await _navigationService.Navigate<CollectionViewSampleViewModel>();
             });
 
             TestAsyncCommandIsBusy = new MvxAsyncCommand(async () => {
@@ -44,6 +44,11 @@ namespace HelloMvvm.ViewModels
             TestAsyncCommandClickEventPage = new MvxAsyncCommand(async () => {
 
                 var result = await _navigationService.Navigate<CLeckEventPageViewModel>();
+            });
+
+            TestAsyncCommandNavigationSample = new MvxAsyncCommand(async () => {
+
+                var result = await _navigationService.Navigate<NavigationSamplePageViewModel>();
             });
         }
 

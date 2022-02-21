@@ -12,7 +12,7 @@ using Xamarin.Forms;
 
 namespace HelloMvvm.ViewModels
 {
-    public class CollectionViewSampleViewModel :  MvxViewModel<string, string>
+    public class CollectionViewSampleViewModel : MvxViewModel
     {
 
         public ICommand TapCommand { get; set; }
@@ -59,9 +59,5 @@ namespace HelloMvvm.ViewModels
             return base.Initialize();
         }
 
-        public override void Prepare(string parameter)
-        {
-
-        }
     }
 }
