@@ -41,6 +41,7 @@
 
                 <Button
                     BackgroundColor="Blue"
+                    Command="{Binding TestAsyncCommandClickEventPage}"
                     CornerRadius="4"
                     Text="CLICK EVENT"
                     TextColor="White" />

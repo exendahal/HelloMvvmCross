@@ -19,6 +19,7 @@ namespace HelloMvvm.ViewModels
         public IMvxAsyncCommand TestAsyncCommandSimpleBinding { get; set; }
         public IMvxAsyncCommand TestAsyncCommandCollection { get; set; }
         public IMvxAsyncCommand TestAsyncCommandIsBusy { get; set; }
+        public IMvxAsyncCommand TestAsyncCommandClickEventPage { get; set; }
 
        
 
@@ -38,6 +39,11 @@ namespace HelloMvvm.ViewModels
             TestAsyncCommandIsBusy = new MvxAsyncCommand(async () => {
 
                 var result = await _navigationService.Navigate<MyBusyPageViewModel>();
+            });
+
+            TestAsyncCommandClickEventPage = new MvxAsyncCommand(async () => {
+
+                var result = await _navigationService.Navigate<CLeckEventPageViewModel>();
             });
         }
 
