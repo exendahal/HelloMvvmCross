@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<d:MvxContentPage
+    x:Class="HelloMvvm.Pages.MyBusyPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:HelloMvvm.ViewModels"
+    Title="Is Busy Binding"
+    x:TypeArguments="viewModels:MyBusyPageViewModel">
+    <ContentPage.Content>
+        <Grid>
+            <ActivityIndicator
+                HeightRequest="40"
+                HorizontalOptions="CenterAndExpand"
+                IsRunning="{Binding IsBusy}"
+                VerticalOptions="CenterAndExpand"
+                Color="Blue" />
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                IsVisible="{Binding IsVisibleData}"
+                Text="I am free now. YAY"
+                VerticalOptions="CenterAndExpand" />
+        </Grid>
+    </ContentPage.Content>
+</d:MvxContentPage>
