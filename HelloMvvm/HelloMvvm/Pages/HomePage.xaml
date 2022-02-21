@@ -53,6 +53,7 @@
 
                 <Button
                     BackgroundColor="Blue"
+                    Command="{Binding TestAsyncCommandEntrySample}"
                     CornerRadius="4"
                     Text="User Input"
                     TextColor="White" />

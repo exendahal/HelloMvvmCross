@@ -21,18 +21,26 @@ namespace HelloMvvm.ViewModels
         public IMvxAsyncCommand TestAsyncCommandIsBusy { get; set; }
         public IMvxAsyncCommand TestAsyncCommandClickEventPage { get; set; }
         public IMvxAsyncCommand TestAsyncCommandNavigationSample { get; set; }
+        public IMvxAsyncCommand TestAsyncCommandEntrySample { get; set; }
 
        
 
         public HomePageViewModel(IMvxNavigationService navigation)
         {
             _navigationService = navigation;
+            
+        }
+
+        public override Task Initialize()
+        {
+            //TODO: Add starting logic here
+
             TestAsyncCommandSimpleBinding = new MvxAsyncCommand(async () => {
-               
+
                 var result = await _navigationService.Navigate<GeneralBindingPageViewModel>();
             });
             TestAsyncCommandCollection = new MvxAsyncCommand(async () => {
-               
+
                 var result = await _navigationService.Navigate<CollectionViewSampleViewModel>();
             });
 
@@ -50,13 +58,10 @@ namespace HelloMvvm.ViewModels
 
                 var result = await _navigationService.Navigate<NavigationSamplePageViewModel>();
             });
-        }
+            TestAsyncCommandEntrySample = new MvxAsyncCommand(async () => {
 
-        public override Task Initialize()
-        {
-            //TODO: Add starting logic here
-           
-
+                var result = await _navigationService.Navigate<EntryPageSampleViewModel>();
+            });
             return base.Initialize();
         }
 
