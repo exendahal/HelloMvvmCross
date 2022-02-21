@@ -26,3 +26,7 @@ Build clean, pixel perfect, native UIs. Share behavior and business logic in a s
 - [Youtube](https://www.youtube.com/watch?v=fRo2tW51rWQ&t=1513s)
 - [Blog](https://mentormate.com/blog/6-reasons-mvvmcross-speeds-xamarin-development-personalizes-ux/)
 - [Frameworks comparison](https://github.com/rogerwcpt/xamarin-mvvvm-frameworks)
+
+## Preview
+<img  src="Preview/1.png" width="320" height="450"> <img src="Preview/2.png" width="320" height="450">  <img src="Preview/2.png" width="320" height="450"><br>
+
