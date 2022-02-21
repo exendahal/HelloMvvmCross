@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<d:MvxContentPage
+    x:Class="HelloMvvm.Pages.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:HelloMvvm.ViewModels"
+    Title="MVVMCross Examples"
+    x:TypeArguments="viewModels:HomePageViewModel"
+    Visual="Material">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="24"
+                Spacing="12"
+                VerticalOptions="CenterAndExpand">
+                <Button
+                    BackgroundColor="Blue"
+                    Command="{Binding TestAsyncCommandSimpleBinding}"
+                    CornerRadius="4"
+                    Text="Simple Binding"
+                    TextColor="White" />
+                <Button
+                    BackgroundColor="Blue"
+                    CornerRadius="4"
+                    Text="User Input"
+                    TextColor="White" />
+                <Button
+                    BackgroundColor="Blue"
+                    Command="{Binding TestAsyncCommandCollection}"
+                    CornerRadius="4"
+                    Text="Collection View"
+                    TextColor="White" />
+
+                <Button
+                    BackgroundColor="Blue"
+                    CornerRadius="4"
+                    Text="LOADING"
+                    TextColor="White" />
+
+                <Button
+                    BackgroundColor="Blue"
+                    CornerRadius="4"
+                    Text="CLICK EVENT"
+                    TextColor="White" />
+
+                <Button
+                    BackgroundColor="Blue"
+                    CornerRadius="4"
+                    Text="NAVIGATION"
+                    TextColor="White" />
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</d:MvxContentPage>

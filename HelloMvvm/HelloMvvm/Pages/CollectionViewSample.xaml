@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<d:MvxContentPage
+    x:Class="HelloMvvm.Pages.CollectionViewSample"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:HelloMvvm.ViewModels"
+    Title="Collection View"
+    x:TypeArguments="viewModels:CollectionViewSampleViewModel">
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding obList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="6" VerticalOptions="CenterAndExpand">
+                            <Button
+                                BackgroundColor="Blue"
+                                CornerRadius="4"
+                                Text="{Binding value1}"
+                                TextColor="White" />
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</d:MvxContentPage>

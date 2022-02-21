@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<d:MvxContentPage
+    x:Class="HelloMvvm.Pages.GeneralBindingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:HelloMvvm.ViewModels"
+    Title="Simple Binding"
+    x:TypeArguments="viewModels:GeneralBindingPageViewModel">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label
+                FontSize="22"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Value1}"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label
+                FontSize="20"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Value2}"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label
+                FontSize="18"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Value3}"
+                TextColor="Black"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</d:MvxContentPage>
