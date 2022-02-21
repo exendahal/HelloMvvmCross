@@ -28,5 +28,5 @@ Build clean, pixel perfect, native UIs. Share behavior and business logic in a s
 - [Frameworks comparison](https://github.com/rogerwcpt/xamarin-mvvvm-frameworks)
 
 ## Preview
-<img  src="Preview/1.png" width="320" height="450"> <img src="Preview/2.png" width="320" height="450">  <img src="Preview/2.png" width="320" height="450"><br>
+<img  src="HelloMvvm/Preview/1.png" width="260" height="450"> <img src="HelloMvvm/Preview/2.png" width="260" height="450">  <img src="HelloMvvm/Preview/3.png" width="260" height="450"><br>
 
